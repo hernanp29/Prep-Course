@@ -167,9 +167,9 @@ function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
   //Escribe tu código aquí  
-  var igual = arreglo[0];
+
   for(var i = 1; i < arreglo.length;i++) {
-    if (igual !== arreglo[i]){
+    if (arreglo[i] !== arreglo[i+1]){
       return false;
     }
   }
@@ -185,7 +185,6 @@ function mesesDelAño(array) {
   var nuevoarray = [];
   for(var i = 0; i < array.length; i++){
     if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
-      return array[i];
       nuevoarray.push(array[i]);
     }
   }
@@ -221,9 +220,17 @@ function breakStatement(numero) {
   // Tu código:
   var nuevo = [];
   for(var i = 0; i < 10; i++){
-    if(n === i) break;
     n = n + 2;
-    nuevo[i] = n; 
+    if(n === i) break;
+    else{
+      nuevo.push(n); 
+    }
+  }
+  if(i<10){
+    return "Se interrumpio la ejecucion";
+  }
+  else{
+    return nuevo;
   }
 }
 
@@ -238,7 +245,7 @@ function continueStatement(numero) {
   var array = [];
   var num = numero;
   for(var i = 0; i <10; i++){
-    if(i = 5) continue;
+    if(i === 5) continue;
     else{
       num = num + 2;
       array.push(num);
