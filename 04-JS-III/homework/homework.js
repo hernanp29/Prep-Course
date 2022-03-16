@@ -3,7 +3,7 @@
 function devolverPrimerElemento(array) {
   // Devuelve el primer elemento de un  array (pasado por parametro)
   // Tu código:
-  return array[1];
+  return array[0];
 }
 
 function devolverUltimoElemento(array) {
@@ -103,8 +103,8 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
-  var mayor = 0;
-  for (var i = 0; i < numeros.length; i++){
+  var mayor = numeros[0];
+  for (var i = 1; i < numeros.length; i++){
     if(numeros1[i]>mayor){
       mayor = numeros[i];
     }
@@ -156,7 +156,7 @@ function empiezaConNueve(n) {
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
   let num = n.toString();
- if(num.charAt(0) === 9) {
+ if(num.charAt(0) === "9") {
    return true;
  }
  return false;
